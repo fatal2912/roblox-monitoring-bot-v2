@@ -15,6 +15,6 @@
     "build:dashboard": "npm run build --workspace @rbm/dashboard"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   }
 }
