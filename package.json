@@ -1,0 +1,20 @@
+{
+  "name": "roblox-monitoring-bot-v2",
+  "private": true,
+  "version": "2.0.0",
+  "workspaces": [
+    "apps/worker",
+    "apps/dashboard",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:worker": "npm run dev --workspace @rbm/worker",
+    "dev:dashboard": "npm run dev --workspace @rbm/dashboard",
+    "build": "npm run build --workspace @rbm/shared && npm run build:worker && npm run build:dashboard",
+    "build:worker": "npm run build --workspace @rbm/shared && npm run build --workspace @rbm/worker",
+    "build:dashboard": "npm run build --workspace @rbm/dashboard"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
